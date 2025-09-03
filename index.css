@@ -4,40 +4,44 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  font-size: 10px;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 a {
   color: white;
-  font-size: 2rem;
   text-decoration: none;
 }
 h1 {
   font-size: 4rem;
 }
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
 .main-head {
-  background-color: rgb(204, 108, 92);
-  width: 100%;
-  height: 10vh;
-  color: white;
+  background-color: rgb(104, 40, 241);
+  color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0%;
 }
 
 nav {
-  top: 0%;
-  max-width: 90vw;
-  min-height: 10vh;
-  margin: auto;
+  padding: 1.5rem;
+
   display: flex;
   flex-wrap: wrap;
   font-size: 2rem;
   justify-content: center;
   align-content: center;
+  text-shadow: 2px 2px 5px black;
 }
 nav h1 {
   flex: 1 1 40rem;
+  padding-left: 1.5rem;
 }
 nav ul {
   display: flex;
@@ -45,29 +49,26 @@ nav ul {
   align-items: center;
   justify-content: space-around;
   list-style: none;
+  font-size: 3rem;
 }
 
 .main {
-  min-height: 90vh;
+  min-height: 90%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  column-gap: 1rem;
 }
 
 .left-main img {
-  height: 40rem;
-  width: 30rem;
-  border-radius: 50rem;
-  margin: 2rem 0 0 2rem;
+  border-radius: 40%;
+  padding: 2rem;
 }
 .left-main p {
-  font-size: 1.5rem;
-  margin: 2rem 0 0 2rem;
-  line-height: normal;
+  font-size: 1.6rem;
+  padding: 2rem;
 }
 .right-main {
-  background-color: rgb(249, 233, 222);
+  background-color: rgb(244, 222, 208);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -76,32 +77,54 @@ nav ul {
 .right-main h1 {
   margin: 2rem;
 }
-
+dl {
+  margin: 2rem;
+  padding: 2rem;
+  color: black;
+}
 dt a {
   font-size: 2rem;
-  text-decoration: underline;
-  margin: 1rem;
   color: black;
 }
 dd {
-  font-size: 1.5rem;
-  margin: 1rem;
-  color: black;
+  font-size: 2rem;
+  margin: 2rem;
 }
 footer {
-  background-color: rgb(159, 182, 195);
+  width: 100%;
+  padding: 2rem;
+  background-color: rgb(104, 80, 181);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px black;
 }
 footer h1 {
   flex: 1 1 40rem;
-  margin-left: 2rem;
-}
-.contact {
-  margin-right: 2rem;
+  padding: 1rem;
 }
 .contact ul {
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 747px) {
+  html {
+    font-size: 45%;
+    text-align: center;
+  }
+  .main-head {
+    width: 100%;
+    margin-right: 5rem;
+  }
+
+  .main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .contact {
+    flex: 1 1 40rem;
+  }
 }
